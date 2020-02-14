@@ -1,0 +1,15 @@
+# import * from './generated/prisma.graphql'
+
+type Mutation {
+  createTrack(fullName: String!): Track
+  updateTrack(fullName: String!, id: ID!): Track
+}
+
+type Query {
+  tracks(orderBy: TrackOrderByInput, first: Int): [Track]!
+  track(where: TrackWhereUniqueInput!): Track
+}
+
+type Subscription {
+  createTracks: Track!
+}

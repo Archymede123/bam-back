@@ -1,0 +1,10 @@
+#endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://radiobam-production-96e6e749a6.herokuapp.com/radiobam-backend-prod/prod
+datamodel: datamodel.prisma
+secret: ${env:PRISMA_SECRET}
+hooks:
+  post-deploy:
+    - graphql get-schema -p prisma
+generate:
+  - generator: graphql-schema
+    output: ./src/generated/prisma.graphql

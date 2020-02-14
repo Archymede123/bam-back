@@ -1,0 +1,10 @@
+type Track {
+  id: ID! @id
+  fullName: String! @unique
+  track: String!
+  artist: String!
+  record: String
+  cover: String
+  artistCover: String
+  updatedAt: DateTime! @updatedAt
+}
