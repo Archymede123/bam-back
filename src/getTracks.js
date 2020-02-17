@@ -40,10 +40,12 @@ async function getTracksDetails(trackTitle, artist, fullName, db) {
         // trying to make a decision
         // const matchingArtist = searchedArtists.artists.find(art => art && (art.name == artist))
         const matchingArtist = searchedArtists.artists[0];
-        console.log(`starting to process releases for ${matchingArtist.name} - ${matchingArtist.id}`)
-        const artistId = matchingArtist.id
-        queryReleasesTrackList(artistId)
-        getArtistImage()
+        if (matchingArtist) {
+            console.log(`starting to process releases for ${matchingArtist.name} - ${matchingArtist.id}`)
+            const artistId = matchingArtist.id
+            queryReleasesTrackList(artistId)
+            getArtistImage()
+        }
     }
 
     // 3. Query releases tracklist each second
