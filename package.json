@@ -18,7 +18,7 @@
     "dotenv": "6.0.0",
     "graphql": "^0.13.2",
     "graphql-cli": "^3.0.14",
-    "graphql-import": "^1.0.0-beta.1",
+    "graphql-import": "^1.0.2",
     "graphql-yoga": "1.16.2",
     "icecast-parser": "^3.2.1",
     "jsonwebtoken": "8.3.0",
